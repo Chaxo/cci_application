@@ -47,6 +47,20 @@ pa.FacialHairType.NONE = pa.FacialHairType.DEFAULT
 pa.MouthType.HAPPY = pa.FacialHairType.DEFAULT
 pa.EyesType.OPEN = pa.EyesType.DEFAULT
 pa.AccessoriesType.NONE = pa.AccessoriesType.DEFAULT
+pa.TopType.WINTER_HAT_USHANKA = pa.TopType.WINTER_HAT1
+pa.TopType.WINTER_HAT_HOLIDAY = pa.TopType.WINTER_HAT2
+pa.TopType.WINTER_HAT_BEANIE = pa.TopType.WINTER_HAT3
+pa.TopType.WINTER_HAT_BEANIE_EARS = pa.TopType.WINTER_HAT4
+pa.TopType.LONG_HAIR_STRAIGHT_WAVY = pa.TopType.LONG_HAIR_STRAIGHT2
+pa.TopType.SHORT_HAIR_DREADS_SHORT = pa.TopType.SHORT_HAIR_DREADS_01
+pa.TopType.SHORT_HAIR_DREADS_LONG = pa.TopType.SHORT_HAIR_DREADS_02
+pa.ClotheColor.BLUE_LIGHT = pa.ClotheColor.BLUE_01
+pa.ClotheColor.BLUE_MEDIUM = pa.ClotheColor.BLUE_02
+pa.ClotheColor.BLUE_DARK = pa.ClotheColor.BLUE_03
+pa.ClotheColor.GRAY_LIGHT = pa.ClotheColor.GRAY_01
+pa.ClotheColor.GRAY_DARK = pa.ClotheColor.GRAY_02
+pa.AccessoriesType.PRESCRIPTION_WHITE = pa.AccessoriesType.PRESCRIPTION_01
+pa.AccessoriesType.PRESCRIPTION_BLACK = pa.AccessoriesType.PRESCRIPTION_02
 
 def page_background(state):
     list_background = ['CIRCLE','TRANSPARENT']
@@ -59,23 +73,22 @@ def page_skin_color(state):
     display_state_values(state)
 
 def page_top_type(state):
-    list_top_type = ['NO_HAIR','HAT','HIJAB','TURBAN','WINTER_HAT1','WINTER_HAT2','WINTER_HAT3','WINTER_HAT4','LONG_HAIR_BIG_HAIR','LONG_HAIR_BOB','LONG_HAIR_BUN',
-                 'LONG_HAIR_CURLY','LONG_HAIR_CURVY','LONG_HAIR_DREADS','LONG_HAIR_FRIDA','LONG_HAIR_FRO','LONG_HAIR_FRO_BAND','LONG_HAIR_NOT_TOO_LONG','LONG_HAIR_MIA_WALLACE',
-                 'LONG_HAIR_SHAVED_SIDES','LONG_HAIR_STRAIGHT','LONG_HAIR_STRAIGHT2','LONG_HAIR_STRAIGHT_STRAND','SHORT_HAIR_DREADS_01','SHORT_HAIR_DREADS_02','SHORT_HAIR_FRIZZLE',
+    list_top_type = ['NO_HAIR','HAT','HIJAB','TURBAN','WINTER_HAT_USHANKA','WINTER_HAT_HOLIDAY','WINTER_HAT_BEANIE','WINTER_HAT_BEANIE_EARS','LONG_HAIR_BIG_HAIR','LONG_HAIR_BOB','LONG_HAIR_BUN',
+                 'LONG_HAIR_CURLY','LONG_HAIR_CURVY','LONG_HAIR_DREADS','LONG_HAIR_FRO','LONG_HAIR_FRO_BAND','LONG_HAIR_NOT_TOO_LONG','LONG_HAIR_MIA_WALLACE',
+                 'LONG_HAIR_STRAIGHT','LONG_HAIR_STRAIGHT_WAVY','LONG_HAIR_STRAIGHT_STRAND','SHORT_HAIR_DREADS_SHORT','SHORT_HAIR_DREADS_LONG','SHORT_HAIR_FRIZZLE',
                  'SHORT_HAIR_SHAGGY_MULLET','SHORT_HAIR_SHORT_CURLY','SHORT_HAIR_SHORT_FLAT','SHORT_HAIR_SHORT_ROUND','SHORT_HAIR_SHORT_WAVED','SHORT_HAIR_SIDES','SHORT_HAIR_THE_CAESAR','SHORT_HAIR_THE_CAESAR_SIDE_PART']
-                 #Removed 'EYE_PATCH'
+                  #Removed 'EYE_PATCH' ''LONG_HAIR_SHAVED_SIDES' 'LONG_HAIR_FRIDA'
     state.option_top_type = st.selectbox('Head',list_top_type, list_top_type.index(state.option_top_type) if state.option_top_type else 0)
     display_state_values(state)
 
 def page_hair_color(state):
     list_hair_color = ['BLACK','AUBURN','BLONDE','BLONDE_GOLDEN','BROWN','BROWN_DARK','PASTEL_PINK','PLATINUM','RED','SILVER_GRAY']
-    state.option_hair_color = st.selectbox('Hair Color',list_hair_color, list_hair_color.index(state.option_hair_color) if state.option_hair_color else 0)
+    state.option_hair_color = st.selectbox('Hair Color (applicable if a hairstyle is selected)',list_hair_color, list_hair_color.index(state.option_hair_color) if state.option_hair_color else 0)
     display_state_values(state)
 
 def page_hat_color(state):
-    list_hat_color = ['BLACK','BLUE_01','BLUE_02','BLUE_03','GRAY_01','GRAY_02','HEATHER','PASTEL_BLUE','PASTEL_GREEN','PASTEL_ORANGE','PASTEL_RED','PASTEL_YELLOW','PINK','RED','WHITE']
-    #['BLACK','AUBURN','BLONDE','BLONDE_GOLDEN','BROWN','BROWN_DARK','PASTEL_PINK','PLATINUM','RED','SILVER_GRAY']
-    state.option_hat_color = st.selectbox('Hat Color (if a hat is selected as Head)',list_hat_color, list_hat_color.index(state.option_hat_color) if state.option_hat_color else 0)
+    list_hat_color = ['BLACK','BLUE_LIGHT','BLUE_MEDIUM','BLUE_DARK','GRAY_LIGHT','GRAY_DARK','HEATHER','PASTEL_BLUE','PASTEL_GREEN','PASTEL_ORANGE','PASTEL_RED','PASTEL_YELLOW','PINK','RED','WHITE']
+    state.option_hat_color = st.selectbox('Hat Color (applicable if a hat is selected)',list_hat_color, list_hat_color.index(state.option_hat_color) if state.option_hat_color else 0)
     display_state_values(state)
     
 def page_eyebrow_type(state):
@@ -89,7 +102,7 @@ def page_eye_type(state):
     display_state_values(state)
 
 def page_glasses_type(state):
-    list_glasses_type = ['NONE','KURT','PRESCRIPTION_01','PRESCRIPTION_02','ROUND','SUNGLASSES','WAYFARERS']
+    list_glasses_type = ['NONE','KURT','PRESCRIPTION_WHITE','PRESCRIPTION_BLACK','ROUND','SUNGLASSES','WAYFARERS']
     state.option_glasses_type = st.selectbox('Glasses',list_glasses_type, list_glasses_type.index(state.option_glasses_type) if state.option_glasses_type else 0)
     display_state_values(state)
 
@@ -104,24 +117,24 @@ def page_facial_hair_type(state):
     display_state_values(state)
 
 def page_facial_hair_color(state):
-    list_facial_hair_color = ['BLACK','BLUE_01','BLUE_02','BLUE_03','GRAY_01','GRAY_02','HEATHER','PASTEL_BLUE','PASTEL_GREEN','PASTEL_ORANGE','PASTEL_RED','PASTEL_YELLOW','PINK','RED','WHITE']
-    #['BLACK','AUBURN','BLONDE','BLONDE_GOLDEN','BROWN','BROWN_DARK','PASTEL_PINK','PLATINUM','RED','SILVER_GRAY']
+    list_facial_hair_color = ['BLACK','BLUE_LIGHT','BLUE_MEDIUM','BLUE_DARK','GRAY_LIGHT','GRAY_DARK','HEATHER','PASTEL_BLUE','PASTEL_GREEN','PASTEL_ORANGE','PASTEL_RED','PASTEL_YELLOW','PINK','RED','WHITE']
     state.option_facial_hair_color = st.selectbox('Facial Hair Color',list_facial_hair_color, list_facial_hair_color.index(state.option_facial_hair_color) if state.option_facial_hair_color else 0)
     display_state_values(state)
 
 def page_clothe_type(state):
-    list_clothe_type = ['BLAZER_SHIRT','BLAZER_SWEATER','COLLAR_SWEATER','GRAPHIC_SHIRT','HOODIE','OVERALL','SHIRT_CREW_NECK','SHIRT_SCOOP_NECK','SHIRT_V_NECK']
+    list_clothe_type = ['COLLAR_SWEATER','GRAPHIC_SHIRT','HOODIE','OVERALL','SHIRT_CREW_NECK','SHIRT_SCOOP_NECK','SHIRT_V_NECK']
+                        #Rmoved 'BLAZER_SHIRT' 'BLAZER_SWEATER'
     state.option_clothe_type = st.selectbox('Clothe',list_clothe_type, list_clothe_type.index(state.option_clothe_type) if state.option_clothe_type else 0)
     display_state_values(state)
 
 def page_clothe_color(state):
-    list_clothe_color = ['BLACK','BLUE_01','BLUE_02','BLUE_03','GRAY_01','GRAY_02','HEATHER','PASTEL_BLUE','PASTEL_GREEN','PASTEL_ORANGE','PASTEL_RED','PASTEL_YELLOW','PINK','RED','WHITE']
+    list_clothe_color = ['BLACK','BLUE_LIGHT','BLUE_MEDIUM','BLUE_DARK','GRAY_LIGHT','GRAY_DARK','HEATHER','PASTEL_BLUE','PASTEL_GREEN','PASTEL_ORANGE','PASTEL_RED','PASTEL_YELLOW','PINK','RED','WHITE']
     state.option_clothe_color = st.selectbox('Clothe Color',list_clothe_color, list_clothe_color.index(state.option_clothe_color) if state.option_clothe_color else 0)
     display_state_values(state)
 
 def page_clothe_graphic(state):
     list_clothe_graphic_type = ['BAT','CUMBIA','DEER','DIAMOND','HOLA','PIZZA','RESIST','SELENA','BEAR','SKULL_OUTLINE','SKULL']
-    state.option_clothe_graphic_type = st.selectbox('Clothe Graphic (if GRAPHIC_SHIRT is selected as Clothe)',list_clothe_graphic_type, list_clothe_graphic_type.index(state.option_clothe_graphic_type) if state.option_clothe_graphic_type else 0)
+    state.option_clothe_graphic_type = st.selectbox('Clothe Graphic (applicable if GRAPHIC_SHIRT is selected)',list_clothe_graphic_type, list_clothe_graphic_type.index(state.option_clothe_graphic_type) if state.option_clothe_graphic_type else 0)
     display_state_values(state)
 
 
@@ -140,7 +153,7 @@ def display_state_values(state):
         eyebrow_type=getattr(pa.EyebrowType, str(state.option_eyebrow_type), pa.EyebrowType.DEFAULT),
         nose_type=pa.NoseType.DEFAULT,
         accessories_type=getattr(pa.AccessoriesType, str(state.option_glasses_type), pa.AccessoriesType.DEFAULT),
-        clothe_type=getattr(pa.ClotheType, str(state.option_clothe_type), pa.ClotheType.BLAZER_SHIRT),
+        clothe_type=getattr(pa.ClotheType, str(state.option_clothe_type), pa.ClotheType.COLLAR_SWEATER),
         clothe_color=getattr(pa.ClotheColor, str(state.option_clothe_color), pa.HairColor.BLACK),
         clothe_graphic_type=getattr(pa.ClotheGraphicType, str(state.option_clothe_graphic_type), pa.ClotheGraphicType.BAT),
 )
