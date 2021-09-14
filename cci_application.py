@@ -66,7 +66,7 @@ pa.AccessoriesType.PRESCRIPTION_BLACK = pa.AccessoriesType.PRESCRIPTION_02
 def page_gender(state):
     list_gender_option = ['Male','Female']
     st.markdown('Select your sex first. **It is important to not change this afterwards.**')
-    state.gender_option = st.selectbox("",list_gender_option, list_gender_option.index(state.gender_option) if state.gender_option else 0,)
+    state.gender_option = st.selectbox("",list_gender_option, list_gender_option.index(state.gender_option) if state.gender_option else 0)
     if state.gender_option == 'Male': 
         state.list_background = ['CIRCLE','TRANSPARENT']
         state.list_skin_color = ['BLACK','TANNED','YELLOW','PALE','LIGHT','BROWN','DARK_BROWN']
