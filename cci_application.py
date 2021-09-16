@@ -273,7 +273,7 @@ def page_gender(state):
         state.list_mouth_type = ['Smile','Happy','Concerned','Disbelief','Eating','Grimace','Sad','Shocked','Serious','Tongue','Twinkle','Vomit']
         state.list_facial_hair_type = ['Default','Light','Medium','Majestic','Moustache_Fancy','Moustache_Magnum']
         state.list_facial_hair_color = ['Pastel_Yellow','Gray_Light','Gray_Dark','Black','Blue_Light','Blue_Medium','Blue_Dark','Heather','Pastel_Blue','Pastel_Green','Pastel_Orange','Pastel_Red','Pink','Red','White']
-        state.list_clothe_type = ['Shirt_Crew','Shirt_Scoop','Shirt_V_Neck''Hoodie','Collar_Sweater','Graphic_Shirt']
+        state.list_clothe_type = ['Shirt_Crew','Shirt_Scoop','Shirt_V_Neck','Hoodie','Collar_Sweater','Graphic_Shirt']
                                     #Rmoved 'BLAZER_SHIRT' 'BLAZER_SWEATER' 'Overall'
         state.list_clothe_color = ['Black','Blue_Light','Blue_Medium','Blue_Dark','Gray_Light','Gray_Dark','Heather','Pastel_Blue','Pastel_Green','Pastel_Orange','Pastel_Red','Pastel_Yellow','Pink','Red','White']
         state.list_clothe_graphic_type = ['Bat','Deer','Diamond','Hola','Pizza','Bear','Skull_1','Skull_2']
