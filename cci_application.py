@@ -356,21 +356,21 @@ def page_clothe_graphic(state):
 # Static Part
 def display_state_values(state):
     avatar = pa.PyAvataaar(
-        style=getattr(pa.AvatarStyle, str(state.option_background), getattr(pa.AvatarStyle, str(state.initial_background), pa.AvatarStyle.CIRCLE)),
-        skin_color=getattr(pa.SkinColor, str(state.option_skin_color), getattr(pa.SkinColor, str(state.initial_skin_color), pa.SkinColor.PALE)),
-        hair_color=getattr(pa.HairColor, str(state.option_hair_color), getattr(pa.HairColor, str(state.initial_hair_color), pa.HairColor.BLONDE)),
-        facial_hair_type=getattr(pa.FacialHairType, str(state.option_facial_hair_type), getattr(pa.FacialHairType, str(state.initial_facial_hair_type), pa.FacialHairType.DEFAULT)),
-        facial_hair_color=getattr(pa.ClotheColor, str(state.option_facial_hair_color), getattr(pa.ClotheColor, str(state.initial_facial_hair_color), pa.ClotheColor.PASTEL_YELLOW)),
-        top_type=getattr(pa.TopType, str(state.option_top_type), getattr(pa.TopType, str(state.initial_top_type), pa.TopType.SHORT_HAIR_SHORT_FLAT)),
-        hat_color=getattr(pa.ClotheColor, str(state.option_hat_color), getattr(pa.ClotheColor, str(state.initial_hat_color), pa.ClotheColor.BLACK)),
-        mouth_type=getattr(pa.MouthType, str(state.option_mouth_type), getattr(pa.MouthType, str(state.initial_mouth_type), pa.MouthType.SMILE)),
-        eye_type=getattr(pa.EyesType, str(state.option_eye_type), getattr(pa.EyesType, str(state.initial_eye_type), pa.EyesType.DEFAULT)),
-        eyebrow_type=getattr(pa.EyebrowType, str(state.option_eyebrow_type), getattr(pa.EyebrowType, str(state.initial_eyebrow_type), pa.EyebrowType.DEFAULT)),
+        style=getattr(pa.AvatarStyle, str(state.option_background), getattr(pa.AvatarStyle, str(state.initial_background))),
+        skin_color=getattr(pa.SkinColor, str(state.option_skin_color), getattr(pa.SkinColor, str(state.initial_skin_color))),
+        hair_color=getattr(pa.HairColor, str(state.option_hair_color), getattr(pa.HairColor, str(state.initial_hair_color))),
+        facial_hair_type=getattr(pa.FacialHairType, str(state.option_facial_hair_type), getattr(pa.FacialHairType, str(state.initial_facial_hair_type))),
+        facial_hair_color=getattr(pa.ClotheColor, str(state.option_facial_hair_color), getattr(pa.ClotheColor, str(state.initial_facial_hair_color))),
+        top_type=getattr(pa.TopType, str(state.option_top_type), getattr(pa.TopType, str(state.initial_top_type))),
+        hat_color=getattr(pa.ClotheColor, str(state.option_hat_color), getattr(pa.ClotheColor, str(state.initial_hat_color))),
+        mouth_type=getattr(pa.MouthType, str(state.option_mouth_type), getattr(pa.MouthType, str(state.initial_mouth_type))),
+        eye_type=getattr(pa.EyesType, str(state.option_eye_type), getattr(pa.EyesType, str(state.initial_eye_type))),
+        eyebrow_type=getattr(pa.EyebrowType, str(state.option_eyebrow_type), getattr(pa.EyebrowType, str(state.initial_eyebrow_type))),
         nose_type=pa.NoseType.DEFAULT,
-        accessories_type=getattr(pa.AccessoriesType, str(state.option_glasses_type), getattr(pa.AccessoriesType, str(state.initial_glasses_type), pa.AccessoriesType.DEFAULT)),
-        clothe_type=getattr(pa.ClotheType, str(state.option_clothe_type), getattr(pa.ClotheType, str(state.initial_clothe_type), pa.ClotheType.HOODIE)),
-        clothe_color=getattr(pa.ClotheColor, str(state.option_clothe_color), getattr(pa.ClotheColor, str(state.initial_clothe_color), pa.ClotheColor.BLACK)),
-        clothe_graphic_type=getattr(pa.ClotheGraphicType, str(state.option_clothe_graphic_type), getattr(pa.ClotheGraphicType, str(state.initial_clothe_graphic_type), pa.ClotheGraphicType.BAT)),
+        accessories_type=getattr(pa.AccessoriesType, str(state.option_glasses_type), getattr(pa.AccessoriesType, str(state.initial_glasses_type))),
+        clothe_type=getattr(pa.ClotheType, str(state.option_clothe_type), getattr(pa.ClotheType, str(state.initial_clothe_type))),
+        clothe_color=getattr(pa.ClotheColor, str(state.option_clothe_color), getattr(pa.ClotheColor, str(state.initial_clothe_color))),
+        clothe_graphic_type=getattr(pa.ClotheGraphicType, str(state.option_clothe_graphic_type), getattr(pa.ClotheGraphicType, str(state.initial_clothe_graphic_type))),
 )
     
     rendered_avatar = avatar.render_png_file('avatar.png')
