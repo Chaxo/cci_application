@@ -22,9 +22,9 @@ def main():
             "9. Mouth": page_mouth_type,
             "10. Facial Hair Type": page_facial_hair_type,
             "11. Facial Hair Color": page_facial_hair_color,
-            "12. Clothe": page_clothe_type,
-            "13. Clothe Color": page_clothe_color,
-            "14. Clothe Graphic": page_clothe_graphic,
+            "12. Clothing": page_clothe_type,
+            "13. Clothing Color": page_clothe_color,
+            "14. Clothing Graphic": page_clothe_graphic,
         }
 
     st.sidebar.title("Avatar Customization")
@@ -194,7 +194,7 @@ def page_gender(state):
         state.list_background = ['Circle','Transparent']
         state.list_skin_color = ['Pale','Tanned','Yellow','Black','Light','Brown','Dark_Brown']
         state.list_top_type =  ['Short_Flat','Short_Curly','Short_Round','Short_Waved','Short_Dreads','Short_Frizzle','Short_Mullet','Short_Caesar_1','Short_Caesar_2','Long_Fro','Medium_Dreads',
-                                'Bald_1','Bald_2','Hat','Turban','Winter_Hat_1','Winter_Hat_2','Winter_Hat_3',]
+                                'Bald_1','Bald_2','Long_Straight_Wavy','Hat','Turban','Winter_Hat_1','Winter_Hat_2','Winter_Hat_3',]
                                 #Removed 'EYE_PATCH' ''LONG_HAIR_SHAVED_SIDES' 'LONG_HAIR_FRIDA'
         state.list_hair_color = ['Blonde','Blonde_Golden','Brown','Brown_Dark','Black','Auburn','Silver_Gray']
         state.list_hat_color = ['Black','Blue_Dark','Gray_Light','Gray_Dark','Heather','White']
@@ -228,7 +228,7 @@ def page_gender(state):
         state.list_background = ['Circle','Transparent']
         state.list_skin_color = ['Pale','Tanned','Yellow','Black','Light','Brown','Dark_Brown']
         state.list_top_type = ['Long_Straight','Long_Straight_Wavy','Long_Straight_Strand','Long_Curvy','Long_Big','Long_Bob','Long_Curly','Long_Dreads','Long_Fro','Long_Fro_Band','Medium',
-                                'Mia_Wallace','Bun','Hijab','Winter_Hat_1','Winter_Hat_2','Winter_Hat_3','Winter_Hat_4',]
+                                'Mia_Wallace','Bun','Short_Flat','Hijab','Winter_Hat_1','Winter_Hat_2','Winter_Hat_3','Winter_Hat_4']
                                     #Removed 'EYE_PATCH' ''LONG_HAIR_SHAVED_SIDES' 'LONG_HAIR_FRIDA'
         state.list_hair_color = ['Blonde','Blonde_Golden','Brown','Brown_Dark','Black','Auburn','Pastel_Pink','Platinum','Red','Silver_Gray']
         state.list_hat_color = ['Pink','Blue_Light','Blue_Medium','Pastel_Blue','Pastel_Green','Pastel_Orange','Pastel_Red','Pastel_Yellow','Red','White','Black','Blue_Dark','Gray_Light','Gray_Dark','Heather']
@@ -341,15 +341,15 @@ def page_facial_hair_color(state):
     display_state_values(state)
 
 def page_clothe_type(state):
-    state.option_clothe_type = st.selectbox('Clothe',state.list_clothe_type, state.list_clothe_type.index(state.option_clothe_type) if state.option_clothe_type else 0)
+    state.option_clothe_type = st.selectbox('Clothing',state.list_clothe_type, state.list_clothe_type.index(state.option_clothe_type) if state.option_clothe_type else 0)
     display_state_values(state)
 
 def page_clothe_color(state):
-    state.option_clothe_color = st.selectbox('Clothe Color',state.list_clothe_color, state.list_clothe_color.index(state.option_clothe_color) if state.option_clothe_color else 0)
+    state.option_clothe_color = st.selectbox('Clothing Color',state.list_clothe_color, state.list_clothe_color.index(state.option_clothe_color) if state.option_clothe_color else 0)
     display_state_values(state)
 
 def page_clothe_graphic(state):
-    state.option_clothe_graphic_type = st.selectbox('Clothe Graphic (applicable if GRAPHIC_SHIRT is selected)',state.list_clothe_graphic_type, state.list_clothe_graphic_type.index(state.option_clothe_graphic_type) if state.option_clothe_graphic_type else 0)
+    state.option_clothe_graphic_type = st.selectbox('Clothing Graphic (applicable if GRAPHIC_SHIRT is selected)',state.list_clothe_graphic_type, state.list_clothe_graphic_type.index(state.option_clothe_graphic_type) if state.option_clothe_graphic_type else 0)
     display_state_values(state)
 
 
