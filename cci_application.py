@@ -10,7 +10,7 @@ from random import randrange
 def main():
     state = _get_state()
     pages = {
-            "0. Gender": page_gender,
+            "Gender": page_gender,
             "1. Background": page_background,
             "2. Skin Color": page_skin_color,
             "3. Hairstyle/Hat": page_top_type,
