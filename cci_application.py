@@ -353,9 +353,10 @@ def page_clothe_color(state):
 def page_clothe_graphic(state):
     state.option_clothe_graphic_type = st.selectbox('Clothing Graphic (applicable if GRAPHIC_SHIRT is selected)',state.list_clothe_graphic_type, state.list_clothe_graphic_type.index(state.option_clothe_graphic_type) if state.option_clothe_graphic_type else 0)
     display_state_values(state)
-    
+
+# Link can be changed to survey
 def page_redirect(state):
-    link = '[GitHub](http://github.com)'
+    link = '[Click here to go back to survey](http://github.com)'
     st.markdown(link, unsafe_allow_html=True)
    # st.button('Click to go back to survey')
     display_state_values(state)
