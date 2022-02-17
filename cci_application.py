@@ -7,6 +7,7 @@ from PIL import Image
 import base64
 from random import randrange
 
+# Here you can change the order and name
 def main():
     state = _get_state()
     pages = {
