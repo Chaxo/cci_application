@@ -356,8 +356,7 @@ def page_clothe_graphic(state):
     
  def page_redirect(state):
     display_state_values(state)
-    st.button("Click here to redirect back to the survey")
-            #insert function to redirect to page
+
                 
 
 
