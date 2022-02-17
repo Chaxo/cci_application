@@ -355,7 +355,9 @@ def page_clothe_graphic(state):
     display_state_values(state)
     
 def page_redirect(state):
-    st.button('Click to go back to survey')
+    link = '[GitHub](http://github.com)'
+    st.button(link, unsafe_allow_html=True)
+   # st.button('Click to go back to survey')
     display_state_values(state)
 
                 
