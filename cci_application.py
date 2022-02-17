@@ -355,6 +355,7 @@ def page_clothe_graphic(state):
     display_state_values(state)
     
 def page_redirect(state):
+    st.button('Click to go back to survey')
     display_state_values(state)
 
                 
