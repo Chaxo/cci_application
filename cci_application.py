@@ -358,7 +358,6 @@ def page_redirect(state):
     display_state_values(state)
     if st.button("Click here to redirect back to the survey"):
             #insert function to redirect to page
-            else:
                 
 
 
